@@ -14,6 +14,6 @@ func Find(list []string, v string) int {
 			return pos
 		}
 	}
-	// end:solution
 	return -1
+	// end:solution
 }

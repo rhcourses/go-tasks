@@ -4,12 +4,12 @@ package tables
 // Liefert eine Liste mit den Werten der angegebenen Spalte.
 // Falls die Zeilen unterschiedliche Längen haben, wird für fehlende Werte ein leerer String geliefert.
 func GetColumn(table [][]string, col int) []string {
-	var result []string
 	// Hinweis:
 	// Verwenden Sie eine for-Schleife, um die Zeilen der Tabelle zu durchlaufen.
 	// Greifen Sie in jeder Zeile auf das Element der angegebenen Spalte zu.
 	// Prüfen Sie dabei jeweils die Länge der Zeile, um Indexfehler zu vermeiden.
 	// begin:solution
+	var result []string
 	for _, row := range table {
 		if col < len(row) {
 			result = append(result, row[col])
@@ -17,6 +17,6 @@ func GetColumn(table [][]string, col int) []string {
 			result = append(result, "")
 		}
 	}
-	// end:solution
 	return result
+	// end:solution
 }
